@@ -6,9 +6,8 @@ class dynamic_QM():
     self.rows=rows
     self.cols=cols
 
-  def add_state(self,state_val): 
+  def add_state(self): 
     to_add= np.zeros((1,self.cols))
-    to_add[0,0]= state_val
     self.rows+=1
     self.table = np.concatenate([self.table,to_add]) 
 

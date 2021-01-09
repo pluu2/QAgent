@@ -3,21 +3,12 @@ import numpy as np
 from utils.QAgent import *
 from utils.localizationNet import *
 import matplotlib.pyplot as py
+from utils.Utils import generate_square as GS
 
 agent = Q_agent_base()  #this works. 
 
-print(generate_sampling_grid())
-
 #generate data 
 
-a=3
-input=np.zeros((28,28))
-for y in range (28-a-4,28-a): 
-    for x in range(12,16): 
-        input[y][x]=1
-py.imshow(input)
+square=GS(1,2)
+py.imshow(square)
 py.show()
-input=input.flatten() 
-
-input=np.array(input)
-input=input.reshape(28,28)

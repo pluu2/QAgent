@@ -22,3 +22,13 @@ class dynamic_QM():
 
   def summary(self): 
     return self.table
+
+
+
+def generate_square(x,y,s=4,w=28,h=28):
+  square=np.zeros((28,28))
+  for y_ in range (w-x-4,w-x): 
+      for x_ in range(h-y-4,h-y): 
+          square[x_][y_]=1
+  square= np.array(square)
+  return square

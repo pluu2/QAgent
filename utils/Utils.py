@@ -7,12 +7,12 @@ class dynamic_QM():
     self.cols=cols
 
   def add_state(self): 
-    to_add= np.zeros((1,self.cols))
+    to_add= np.ones((1,self.cols))
     self.rows+=1
     self.table = np.concatenate([self.table,to_add]) 
 
   def add_action(self): 
-    to_add  = np.zeros((1,self.rows))
+    to_add  = np.ones((1,self.rows))
     self.cols+=1
     self.table=np.concatenate ([self.table.T,to_add]).T
 

@@ -5,7 +5,7 @@ from utils.localizationNet import *
 import matplotlib.pyplot as py
 from utils.Utils import generate_square as GS
 from utils.Utils import dynamic_QM
-
+from model.model import MSE 
 
 agent=Q_agent_base(2)
 
@@ -23,3 +23,6 @@ print(agent.table())
 
 print(agent.return_highest('0212'))
 print(agent.return_highest('1232'))
+
+
+print(agent.return_Q('0212',1))

@@ -39,6 +39,9 @@ class Q_agent_base():
       pass
     #self.QM.table[self.QM.search_states(state)[0]][action+1]=reward  #assumes the first value is the correct one, as there should be no duplciates
 
-  def return_highest (self, state): 
-    return np.argmax(self.QM.summary()[self.states.index(state)] )
+  def return_lowest (self, state): 
+    return np.min(self.QM.summary()[self.states.index(state)] )
+
+  def return_Q (self,state,action): 
+    return self.QM.table[self.states.index(state)][action+1]
   

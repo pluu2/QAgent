@@ -2,17 +2,17 @@ import numpy as np
 #class that adds columns as rows are added. 
 class dynamic_QM(): 
   def __init__(self,rows=1,cols=1): 
-    self.table =np.zeros((1,1)) 
+    self.table =np.ones((1,1)) *5
     self.rows=rows
     self.cols=cols
 
   def add_state(self): 
-    to_add= np.ones((1,self.cols))
+    to_add= np.ones((1,self.cols)) *5
     self.rows+=1
     self.table = np.concatenate([self.table,to_add]) 
 
   def add_action(self): 
-    to_add  = np.ones((1,self.rows))
+    to_add  = np.ones((1,self.rows)) *5
     self.cols+=1
     self.table=np.concatenate ([self.table.T,to_add]).T
 
